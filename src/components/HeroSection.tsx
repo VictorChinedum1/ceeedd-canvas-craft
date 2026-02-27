@@ -80,17 +80,17 @@ const HeroSection = () => {
               <p className="text-muted-foreground text-lg md:text-xl font-elegant italic mb-10 max-w-lg">
                 {slide.description}
               </p>
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#menu"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground hover:bg-gold-light transition-all duration-300 text-sm tracking-widest uppercase font-body group"
+                  className="inline-flex items-center justify-center sm:justify-start gap-2 px-6 sm:px-8 py-3.5 bg-primary text-primary-foreground hover:bg-gold-light transition-all duration-300 text-sm tracking-widest uppercase font-body group"
                 >
                   Explore Our Menu
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="#booking"
-                  className="inline-flex items-center px-8 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm tracking-widest uppercase font-body"
+                  className="inline-flex items-center justify-center sm:justify-start px-6 sm:px-8 py-3.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm tracking-widest uppercase font-body"
                 >
                   Reserve Table
                 </a>

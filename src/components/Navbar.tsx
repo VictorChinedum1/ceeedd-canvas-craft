@@ -24,8 +24,12 @@ const Navbar = () => {
   return (
     <nav className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-background"}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-16 py-4">
-        <a href="#home" className="font-display text-2xl md:text-3xl font-bold tracking-wider text-primary">
-          CEEDD
+        <a href="#home" className="flex items-center gap-3">
+          <img 
+            src="/logo.png" 
+            alt="CEEDD Restaurant" 
+            className="h-20 w-auto object-contain drop-shadow-lg"
+          />
         </a>
 
         {/* Desktop nav */}
@@ -34,16 +38,17 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-foreground hover:text-primary transition-colors text-sm tracking-widest uppercase font-body"
+              className="text-foreground hover:text-primary transition-colors text-sm tracking-widest uppercase font-body relative group"
             >
               {link.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
 
         <a
           href="#booking"
-          className="hidden md:inline-flex items-center px-6 py-2.5 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 text-sm tracking-widest uppercase font-body"
+          className="hidden md:inline-flex items-center px-6 py-2.5 border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-300 text-sm tracking-widest uppercase font-body"
         >
           Reserve Table
         </a>
@@ -69,15 +74,16 @@ const Navbar = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-foreground hover:text-primary transition-colors text-sm tracking-widest uppercase"
+                  className="text-foreground hover:text-primary transition-colors text-sm tracking-widest uppercase relative group"
                 >
                   {link.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               ))}
               <a
                 href="#booking"
                 onClick={() => setMobileOpen(false)}
-                className="px-6 py-2 border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all text-sm tracking-widest uppercase"
+                className="px-6 py-2 border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition-all text-sm tracking-widest uppercase"
               >
                 Reserve Table
               </a>
